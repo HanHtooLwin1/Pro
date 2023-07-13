@@ -1,0 +1,1013 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: start;
+}
+
+/* Start first page */
+
+.bg-img {
+    background-image: url(../image/bg.png);
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    width: 100vw;
+    height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@font-face {
+    font-family: myLocalFont;
+    src: url(../font_family/DragonHunter-9Ynxj.otf);
+}
+
+.heading {
+    font-family: myLocalFont;
+    position: absolute;
+    top: 5%;
+    left: 15%;
+    color: rgb(132, 0, 255);
+    font-size: 3vw;
+    line-height: 7vw;
+}
+
+.heading span {
+    font-size: 6vw;
+    color: rgb(22, 0, 216);
+}
+
+.logo {
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    width: 5%;
+}
+
+.hero img{
+    position: absolute;
+    top: 5%;
+    right: 0;
+    width: 30vw;
+}
+
+
+.aboutweb {
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(190, 223, 252);
+    font-weight: bold;
+    font-style: italic;
+    font-size: 15pt;
+    position: absolute;
+    top: 40%;
+    left: 15vw;
+    line-height: 30px;
+}
+
+.btn {
+    position: absolute;
+    left: 15%;
+    bottom: 20%;
+    background-color: rgba(0, 0, 0,0);
+    padding: 10px 100px;
+    border: 3px solid black;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.btn a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+.btn:active {
+    background-color: #d0d3d0;
+    box-shadow: 3px 3px 7px #000000;
+    transform: translateY(4px);
+}
+
+.btn a:active {
+    color: blue;
+}
+
+.tooltip {
+    position: absoulte;
+    display: inline-block;
+}
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 250px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 9px;
+    padding: 10px 10px ;
+    position: absolute;
+    z-index: 1;
+    top: 0%;
+    left: 110%;
+}
+  
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/*mobile phones view: */
+@media only screen and (max-width: 600px){
+    .heading {
+        text-align: center;
+        font-size: 8vw;
+        line-height: 10vw;
+        left: 20%;
+    }
+
+    .heading span {
+        font-size: 8vw;
+    }
+
+    .hero img {
+        width: 25vw;
+        left: 0;
+        top: 15%;
+    }
+
+    .aboutweb {
+        text-align: center;
+        top: 35vw;
+        left: 22vw;
+        font-size: 3vw;
+        line-height: 4vw;
+        width: 60vw;
+    }
+
+    .btn {
+        left: 35vw;
+        padding: 10px 10vw;
+        top: 75vw;
+        bottom: auto;
+    }
+
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 40vw;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        top: 150%;
+        left: 20%;
+        margin-left: -60px;
+      }
+
+      .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: -1vw;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent black transparent;
+      }
+      
+
+    .headanimation {
+        animation: head 1s ;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+        top: -3vw;
+    }
+
+    @keyframes head {
+        from{top:-10vw;}
+        to{top: 1vw;}
+    }
+
+    .textanimation {
+        animation: text 1s ;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+        opacity: 0;
+    }
+
+    @keyframes text {
+        from{opacity: 0;}
+        to{opacity: 1;}
+    }
+
+    .heroanimation {
+        animation: hero 1s ;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+        opacity: 0;
+
+    }
+
+    @keyframes hero {
+        from{opacity: 0;}
+        to{opacity: 1;}
+    }
+
+    .ul {
+        text-align: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 40%;
+        border: none;
+    }
+      
+    .ul li a {
+        background-color: rgb(34, 25, 25);
+        border-radius: 5px;
+        display: block;
+        color: #ffffff;
+        padding: 1% 4%;
+        text-decoration: none;
+        width: 20%;
+        margin: 1%;
+        display: block;
+        float: inline-end;
+        font-size: 3vw;
+    }
+      
+    .ul li a.active {
+        background-color: #091186;
+        color: white;
+    }
+      
+    .ul li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+    }
+}
+
+/*tablets view: */
+@media only screen and (min-width: 600px) and (max-width: 1025px){
+    .aboutweb {
+        font-size: 2vw;
+        top: 20vw;
+        width: 50vw;
+    }
+
+    .hero img {
+        width: 40vw;
+    }
+
+    .btn {
+        top: 75%;
+        bottom: auto;
+    }
+
+    .headanimation {
+        animation: head 1s ;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+        top: -3vw;
+    }
+
+    @keyframes head {
+        from{top:-10vw;}
+        to{top: 1vw;}
+    }
+
+    .textanimation {
+        animation: text 1s ;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+        left: 15%;
+    }
+
+    @keyframes text {
+        from{left:-10vw;}
+        to{left: 15%;}
+    }
+
+    .heroanimation {
+        animation: hero 1s ;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+        opacity: 0;
+
+    }
+
+    @keyframes hero {
+        from{opacity: 0;}
+        to{opacity: 1;}
+    }
+
+    .ul {
+        text-align: center;
+        position: absolute;
+        top: 1%;
+        right: 1%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        border: none;
+    }
+      
+    .ul li a {
+        background-color: rgb(34, 25, 25);
+        border-radius: 5px;
+        display: block;
+        color: #ffffff;
+        padding: 0.4% 1%;
+        text-decoration: none;
+        display: block;
+        float: inline-end;
+        width: 100px;
+        margin: 5px;
+    }
+      
+    .ul li a.active {
+        background-color: #091186;
+        color: white;
+    }
+      
+    .ul li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+    }
+}
+
+
+/*laptops view: */
+@media only screen and (min-width: 1025px) {
+    .headanimation {
+        animation: head 1s ;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+        top: -3vw;
+    }
+
+    @keyframes head {
+        from{top:-10vw;}
+        to{top: 1vw;}
+    }
+
+    .textanimation {
+        animation: text 1s ;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+        left: 15%;
+    }
+
+    @keyframes text {
+        from{left:-10vw;}
+        to{left: 15%;}
+    }
+
+    .heroanimation {
+        animation: hero 1s ;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+        opacity: 0;
+
+    }
+
+    @keyframes hero {
+        from{opacity: 0;}
+        to{opacity: 1;}
+    }
+
+    .ul {
+        text-align: center;
+        position: absolute;
+        top: 1%;
+        right: 1%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        border: none;
+    }
+      
+    .ul li a {
+        background-color: rgb(34, 25, 25);
+        border-radius: 5px;
+        display: block;
+        color: #ffffff;
+        padding: 0.4% 1%;
+        text-decoration: none;
+        display: block;
+        float: inline-end;
+        width: 100px;
+        margin: 5px;
+    }
+      
+    .ul li a.active {
+        background-color: #091186;
+        color: white;
+    }
+      
+    .ul li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+    }
+}
+/* End first page */
+
+/* Start hero page */
+.bg2-img {
+    background-image: url(../image/bg2.jpg);
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    width: 100vw;
+    height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.grid-container {
+    position: absolute;
+    height: 45vw;
+    width:80vw;
+    top: 2%;
+    left: 18%;
+    display: grid;
+    background-color: rgba(0, 0, 0,0);
+    padding: 0;
+    gap: 10px;
+}
+
+.grid-item {
+    background-color: rgba(2, 13, 63, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    text-align: center;
+    border-radius: 1%;
+}
+
+.grid-item a {
+    color: rgb(63, 140, 212);
+    text-decoration: none;
+}
+
+.grid-item img {
+    width: 100%;
+    height: 90%;
+    border-radius: 1%;
+}
+
+.grid-item:hover {
+    background-color: rgb(168, 207, 205);
+}
+
+.grid-item:active {
+    background-color: #d0d3d0;
+    box-shadow: 0 5px #5c5c5c;
+    transform: translateY(4px);
+}
+
+/* smaller mobile view */
+@media only screen and (max-width: 400px) {
+    .grid-container {
+        grid-template-columns: 30% 30%;
+        grid-template-rows: 90% 90% 90% 90% 90%;
+        left: 24%;
+    } 
+
+    .grid-item span {
+        position: relative;
+        top: -6%;
+        font-size: 3vw;
+        font-weight: bold;
+    }
+
+    .ul2 {
+        text-align: center;
+        position: absolute;
+        top: 2%;
+        right: 4%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        border: none;
+    }
+      
+    .ul2 li a {
+        background-color: rgb(34, 25, 25);
+        border-radius: 5px;
+        display: block;
+        color: #ffffff;
+        padding: 0.4% 1%;
+        text-decoration: none;
+        display: block;
+        float: inline-end;
+        width: 8vw;
+        font-size: 3vw;
+    }
+      
+    .ul2 li a.active {
+        background-color: #091186;
+        color: white;
+    }
+      
+    .ul2 li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+    }
+
+    .rolebtn {
+        background-color: #0e21ccd2;
+        color: white;
+        padding: 1vw 4vw;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        text-align: center;
+      }
+      
+    .role {
+        position: absolute;
+        top: 7%;
+        right: 6%;
+        display: inline-block;
+      }
+      
+    .role-content {
+        text-align: center;
+        right: 0;
+        display: none;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0);
+        min-width: 100%;
+        box-shadow: 0px 8px 16px 0px rgb(7, 7, 7);
+        z-index: 1;
+    }
+      
+    .role-content a {
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        padding: 12px 2px;
+        text-decoration: none;
+        display: block;
+        font-size: 50%;
+    }
+
+    .role-content a.active{
+        background-color: rgb(250, 250, 250);
+    }
+      
+    .role-content a:hover {color: white; background-color: #000000}
+      
+    .role:hover .role-content {
+        display: block;
+    }
+      
+    .role:hover .rolebtn {
+        background-color: #2c92d6;
+    }
+}
+
+/*mobile phones view: */
+@media only screen and (min-width:400px) and (max-width: 600px){
+    .grid-container {
+        grid-template-columns: 30% 30%;
+        grid-template-rows: 90% 90% 90% 90% 90%;
+        left: 24%;
+    } 
+
+    .grid-item span {
+        position: relative;
+        top: -1%;
+        font-size: 80%;
+        font-weight: bold;
+    }
+
+    .ul2 {
+        text-align: center;
+        position: absolute;
+        top: 2%;
+        right: 4%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        border: none;
+    }
+      
+    .ul2 li a {
+        background-color: rgb(34, 25, 25);
+        border-radius: 5px;
+        display: block;
+        color: #ffffff;
+        padding: 0.4% 1%;
+        text-decoration: none;
+        display: block;
+        float: inline-end;
+        width: 8vw;
+        font-size: 3vw;
+    }
+      
+    .ul2 li a.active {
+        background-color: #091186;
+        color: white;
+    }
+      
+    .ul2 li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+    }
+
+    .rolebtn {
+        background-color: #0e21ccd2;
+        color: white;
+        padding: 1vw 4vw;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        text-align: center;
+      }
+      
+    .role {
+        position: absolute;
+        top: 7%;
+        right: 6%;
+        display: inline-block;
+      }
+      
+    .role-content {
+        text-align: center;
+        right: 0;
+        display: none;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0);
+        min-width: 100%;
+        box-shadow: 0px 8px 16px 0px rgb(7, 7, 7);
+        z-index: 1;
+    }
+      
+    .role-content a {
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        padding: 12px 2px;
+        text-decoration: none;
+        display: block;
+        font-size: 50%;
+    }
+
+    .role-content a.active{
+        background-color: rgb(250, 250, 250);
+    }
+      
+    .role-content a:hover {color: white; background-color: #000000}
+      
+    .role:hover .role-content {
+        display: block;
+    }
+      
+    .role:hover .rolebtn {
+        background-color: #2c92d6;
+    }
+}
+
+/*tablets view: */
+@media only screen and (min-width: 600px) and (max-width: 1025px){
+    .grid-container {
+        grid-template-columns: 30% 30% 30%;
+        grid-template-rows: 80% 80% 80% 80%;
+        left: 14%;
+    }
+
+    .grid-item a {
+        font-size: 2vw;
+    }
+
+    .bg2-img {
+        height: 230vh;
+    }
+
+    .grid-item {
+        font-size: 15pt;
+        font-weight: bold;
+    }
+
+    .ul2 {
+        text-align: center;
+        position: absolute;
+        top: 10%;
+        left: 1%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 10%;
+        border: none;
+    }
+      
+    .ul2 li a {
+        background-color: rgb(34, 25, 25);
+        border-radius: 5px;
+        display: block;
+        color: #ffffff;
+        padding: 5px 1%;
+        text-decoration: none;
+        display: block;
+        width: 7vw;
+        margin: 5px;
+        font-size: 15px;
+    }
+      
+    .ul2 li a.active {
+        background-color: #091186;
+        color: white;
+    }
+      
+    .ul2 li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+    }
+
+    .rolebtn {
+        background-color: #0e21ccd2;
+        color: white;
+        padding: 1vw 4vw;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        width: 12vw;
+        text-align: center;
+      }
+      
+    .role {
+        position: absolute;
+        top: 25%;
+        left: 1%;
+        display: inline-block;
+      }
+      
+    .role-content {
+        text-align: center;
+        left: 0;
+        display: none;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0);
+        min-width: 12vw;
+        box-shadow: 0px 8px 16px 0px rgb(7, 7, 7);
+        z-index: 1;
+    }
+      
+    .role-content a {
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        padding: 12px 2px;
+        text-decoration: none;
+        display: block;
+        font-size: 2vw;
+    }
+
+    .role-content a.active{
+        background-color: rgb(250, 250, 250);
+    }
+      
+    .role-content a:hover {color: white; background-color: #000000}
+      
+    .role:hover .role-content {
+        display: block;
+    }
+      
+    .role:hover .rolebtn {
+        background-color: #2c92d6;
+    }
+
+}
+
+
+/*laptops view: */
+@media only screen and (min-width: 1025px) {
+    .grid-container {
+        grid-template-columns: 15% 15% 15% 15% 15%;
+        grid-template-rows: 50% 50%;
+    }
+
+    .ul2 {
+        text-align: center;
+        position: absolute;
+        top: 1%;
+        right: 1%;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 17vw;
+        border: none;
+        
+    }
+      
+    .ul2 li a {
+        background-color: rgb(34, 25, 25);
+        border-radius: 5px;
+        display: block;
+        color: #ffffff;
+        padding: 0.4% 1%;
+        text-decoration: none;
+        display: block;
+        float: left;
+        width: 7vw;
+        margin: 5px;
+    }
+      
+    .ul2 li a.active {
+        background-color: #091186;
+        color: white;
+    }
+      
+    .ul2 li a:hover:not(.active) {
+        background-color: #555;
+        color: white;
+    }
+
+    .rolebtn {
+        background-color: #0e21ccd2;
+        color: white;
+        padding: 1vw 4vw;
+        font-size: 16px;
+        border: none;
+        text-align: center;
+        cursor: pointer;
+        width: 12vw;
+      }
+      
+    .role {
+        position: absolute;
+        top: 5vw;
+        right: 4vw;
+        display: inline-block;
+      }
+      
+    .role-content {
+        text-align: center;
+        left: 0;
+        display: none;
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0);
+        min-width: 12vw;
+        box-shadow: 0px 8px 16px 0px rgb(7, 7, 7);
+        z-index: 1;
+    }
+      
+    .role-content a {
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        padding: 12px 20px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .role-content a.active{
+        background-color: rgb(250, 250, 250);
+    }
+      
+    .role-content a:hover {color: white; background-color: #000000}
+      
+    .role:hover .role-content {
+        display: block;
+    }
+      
+    .role:hover .rolebtn {
+        background-color: #2c92d6;
+    }
+}
+
+/* End hero page */
+
+/* Hero */
+
+.bg3-img {
+    background-image: url(../image/herobg.jpg);
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    width: 100vw;
+    height: 110vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.heroimg {
+    position: absolute;
+    top: 10%;
+    width: 50vw;
+    z-index: 1;
+}
+
+.textbox {
+    background-color: rgba(0, 0, 0, 0);
+    width: 50vw;
+    height: 90vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+}
+
+@font-face {
+    font-family: mySecondLocalFont;
+    src: url(../font_family/FrostbiteBossFight-dL0Z.ttf);
+}
+
+.heroname {
+    font-family: mySecondLocalFont;
+    font-weight: bold;
+    color: rgb(216, 9, 9);
+}
+
+.txttitle {
+    text-align: start;
+    position: relative;
+    left: 10%;
+    width: 20%;
+}
+
+.story {
+    font-size: 100%;
+    margin: auto;
+    text-align: start;
+    width: 40vw;
+    height: 40vh;
+    overflow: auto;
+    line-height: 120%;
+}
+
+hr {
+    color: rgb(214, 214, 250);
+}
+
+.abilities {
+    position: relative;
+    top: 3%;
+    left: 10%;
+    width: 93%;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 0;
+    text-align: start;
+}
+
+.abilities td:nth-child(odd){
+    color: rgb(187, 10, 10);
+}
+
+.abilities td:nth-child(even) {
+    vertical-align:top;
+    color: rgb(0, 0, 0);
+}
+
+.abilities td {
+    width: 50vw;
+}
+
+/*mobile phones view: */
+@media only screen and (max-width: 600px){
+    .textbox {
+        left: 25%;
+    }
+
+    .txttitle {
+        left: 30%;
+    }
+
+    .story {
+        font-size: 4vw;
+        width:75vw;
+        position: relative;
+        left: -10vw;
+        text-align: center;
+    }
+
+    .heroimg {
+        top: 70%;
+    }
+
+    .abilities {
+        position: relative;
+        left: 50%;
+        font-size: 3vw;
+    }
+}
+
